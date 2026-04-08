@@ -1,5 +1,5 @@
 const JOBS_API = 'https://script.google.com/macros/s/AKfycbzu9XeX1qzHQTHp6et6J2UAs13M6RJ4rcDLy6DwdyI4BAoI3Kae1pg-OSORpyNHrlcoFQ/exec';
-const APPLY_PLACEHOLDER = 'mailto:ishvantaacademy@gmail.com?subject=Job%20Application';
+const APPLY_PLACEHOLDER = 'https://docs.google.com/forms/d/e/1FAIpQLSeyJrP6sy0qEIWQf4dVci99KxjsxgOl8a3u_qPs_5uMGtoC1Q/viewform';
 
 const SKILL_ICONS = {
   'Business Analyst': '📋',
@@ -146,7 +146,7 @@ function openDrawer(job) {
 
   const applySection = document.createElement('div');
   applySection.className = 'drawer-apply';
-  applySection.innerHTML = `<a href="${APPLY_PLACEHOLDER}&body=I'm interested in Job #${id} - ${title}" class="drawer-apply-btn">Apply for this Role →</a>`;
+  applySection.innerHTML = `<a href="${APPLY_PLACEHOLDER}" target="_blank" rel="noopener noreferrer" class="drawer-apply-btn">Apply for this Role →</a>`;
   drawer.appendChild(applySection);
 
   overlay.classList.add('active');
