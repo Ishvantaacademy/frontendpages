@@ -1,0 +1,94 @@
+const NAV_LINKS = [
+  { label: 'Home',           href: '../index.html' },
+  { label: 'About',          href: '../pages/about.html' },
+  { label: 'Courses',        href: '../pages/courses.html' },
+  { label: 'Trainers',       href: '../pages/trainers.html' },
+  { label: 'Open Positions', href: '../pages/positions.html' },
+  { label: 'Contact',        href: '../pages/contact.html' },
+];
+
+const ROOT_NAV_LINKS = NAV_LINKS.map(l => ({
+  ...l,
+  href: l.href.replace('../', '')
+}));
+
+function buildNav(links) {
+  const current = window.location.pathname.split('/').pop() || 'index.html';
+  const items = links.map(l => {
+    const name = l.href.split('/').pop();
+    const active = name === current ? ' active' : '';
+    const isCta = l.label === 'Contact';
+    return `<li><a href="${l.href}" class="${isCta ? 'nav-cta' : ''}${active}">${l.label}</a></li>`;
+  }).join('');
+  return `
+  <nav class="nav" id="main-nav">
+    <a href="${links[0].href}" class="nav-logo">Ishvanta<span>.</span>Academy</a>
+    <ul class="nav-links" id="nav-links">${items}</ul>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>`;
+}
+
+function buildFooter(links) {
+  const quickLinks = links.slice(0, 5).map(l =>
+    `<li><a href="${l.href}">${l.label}</a></li>`
+  ).join('');
+  return `
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">Ishvanta<span>.</span>Academy</div>
+        <p>Upskilling India's tech workforce since 2006. Real trainers, real projects, real career growth.</p>
+        <div class="footer-social">
+          <a href="#" class="social-icon" aria-label="LinkedIn">in</a>
+          <a href="#" class="social-icon" aria-label="Twitter">𝕏</a>
+          <a href="#" class="social-icon" aria-label="YouTube">▶</a>
+          <a href="#" class="social-icon" aria-label="Instagram">◎</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>${quickLinks}</ul>
+      </div>
+      <div class="footer-col">
+        <h4>Domains</h4>
+        <ul>
+          <li><a href="${links[2].href}">Analytics</a></li>
+          <li><a href="${links[2].href}">Data Engineering</a></li>
+          <li><a href="${links[2].href}">Web &amp; Mobile</a></li>
+          <li><a href="${links[2].href}">DevOps &amp; QA</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:ishvantaacademy@gmail.com">ishvantaacademy@gmail.com</a></li>
+          <li><a href="tel:+919032800664">+91 90328 00664</a></li>
+          <li><a href="#">Madhapur, Hyderabad</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© ${new Date().getFullYear()} Ishvanta Academy. All rights reserved.</p>
+      <p>Madhapur, Hyderabad · ishvantaacademy@gmail.com</p>
+    </div>
+  </footer>`;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const isRoot = !window.location.pathname.includes('/pages/');
+  const links = isRoot ? ROOT_NAV_LINKS : NAV_LINKS;
+
+  const navPlaceholder = document.getElementById('nav-placeholder');
+  const footerPlaceholder = document.getElementById('footer-placeholder');
+
+  if (navPlaceholder) navPlaceholder.outerHTML = buildNav(links);
+  if (footerPlaceholder) footerPlaceholder.outerHTML = buildFooter(links);
+
+  const toggle = document.getElementById('nav-toggle');
+  const navLinks = document.getElementById('nav-links');
+  if (toggle && navLinks) {
+    toggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+  }
+});

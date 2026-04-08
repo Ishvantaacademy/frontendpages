@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Open Positions — Ishvanta Academy</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/inner.css" />
+  <link rel="stylesheet" href="../css/positions.css" />
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+
+  <section class="page-hero">
+    <div class="section-tag">Hiring</div>
+    <h1 class="section-title">Open <span class="highlight">Positions.</span></h1>
+    <p class="section-subtitle">Roles sourced from our hiring partners. Real jobs, real companies, real opportunities for upskilled professionals.</p>
+  </section>
+
+  <section class="section">
+    <div id="positions-loading" class="positions-loading">
+      <div class="loading-spinner"></div>
+      <p>Fetching live positions…</p>
+    </div>
+    <div id="positions-error" class="positions-error" style="display:none">
+      <p>Could not load positions right now. Please try again or contact us directly.</p>
+    </div>
+    <div id="positions-container" style="display:none"></div>
+  </section>
+
+  <!-- Job Detail Drawer -->
+  <div id="job-drawer-overlay" class="drawer-overlay"></div>
+  <aside id="job-drawer" class="job-drawer">
+    <button id="drawer-close" class="drawer-close" aria-label="Close">✕</button>
+    <div id="drawer-content" class="drawer-content"></div>
+  </aside>
+
+  <div id="footer-placeholder"></div>
+  <script src="../js/main.js"></script>
+  <script src="../js/positions.js"></script>
+</body>
+</html>

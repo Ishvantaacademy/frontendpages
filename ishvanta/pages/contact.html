@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Ishvanta Academy</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/inner.css" />
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+
+  <section class="page-hero">
+    <div class="section-tag">Get in Touch</div>
+    <h1 class="section-title">Let's talk about<br/><span class="highlight">your next move.</span></h1>
+    <p class="section-subtitle">Whether you want to enrol, partner with us for corporate training, or just have questions — reach out.</p>
+  </section>
+
+  <section class="section">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h2>We're here to help.</h2>
+        <p>Not sure which course is right for you? Want to know about upcoming batch dates? Have a corporate training requirement? Drop us a message and we'll get back to you within one business day.</p>
+
+        <div class="contact-detail">
+          <div class="cd-icon">📧</div>
+          <div class="cd-info">
+            <strong>Email</strong>
+            <a href="mailto:ishvantaacademy@gmail.com">ishvantaacademy@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="cd-icon">📞</div>
+          <div class="cd-info">
+            <strong>Phone / WhatsApp</strong>
+            <a href="tel:+919032800664">+91 90328 00664</a>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="cd-icon">📍</div>
+          <div class="cd-info">
+            <strong>Office</strong>
+            <span>Madhapur, Hyderabad, Telangana</span>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="cd-icon">🕐</div>
+          <div class="cd-info">
+            <strong>Office Hours</strong>
+            <span>Mon – Sat, 9 AM – 7 PM IST</span>
+          </div>
+        </div>
+
+        <div style="margin-top:2rem">
+          <p style="font-size:0.82rem;color:rgba(255,255,255,0.35);margin-bottom:0.75rem">Find us on social media</p>
+          <div class="footer-social">
+            <a href="#" class="social-icon" aria-label="LinkedIn">in</a>
+            <a href="#" class="social-icon" aria-label="Twitter">𝕏</a>
+            <a href="#" class="social-icon" aria-label="YouTube">▶</a>
+            <a href="#" class="social-icon" aria-label="Instagram">◎</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-card">
+        <h3 style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;margin-bottom:1.5rem">Send us a message</h3>
+        <form id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="you@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" />
+          </div>
+          <div class="form-group">
+            <label for="interest">I'm interested in…</label>
+            <select id="interest" name="interest">
+              <option value="">Select a topic</option>
+              <option>Analytics Training</option>
+              <option>Data Engineering Training</option>
+              <option>Web &amp; Mobile Development</option>
+              <option>DevOps Training</option>
+              <option>QA &amp; Testing</option>
+              <option>Corporate Training Enquiry</option>
+              <option>Open Positions</option>
+              <option>Something else</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us a bit about yourself and what you're looking for…"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">
+            Send Message →
+          </button>
+          <p id="form-status" style="text-align:center;margin-top:1rem;font-size:0.85rem;color:var(--brand-accent);display:none">
+            Thanks! We'll be in touch within one business day.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script src="../js/main.js"></script>
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const status = document.getElementById('form-status');
+      status.style.display = 'block';
+      this.reset();
+      setTimeout(() => { status.style.display = 'none'; }, 5000);
+    });
+  </script>
+</body>
+</html>
