@@ -22,7 +22,7 @@ function buildNav(links) {
   }).join('');
   return `
   <nav class="nav" id="main-nav">
-    <a href="${links[0].href}" class="nav-logo">Ishvanta<span>.</span>Academy</a>
+    <a href="${links[0].href}" class="nav-logo"><img src="${isRoot ? 'images/Logo.png' : '../images/Logo.png'}" alt="Ishvanta Solutions" style="height: 32px;"></a>
     <ul class="nav-links" id="nav-links">${items}</ul>
     <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
       <span></span><span></span><span></span>
@@ -38,13 +38,14 @@ function buildFooter(links) {
   <footer class="footer">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="footer-logo">Ishvanta<span>.</span>Academy</div>
+        <div class="footer-logo"><img src="${isRoot ? 'images/Logo.png' : '../images/Logo.png'}" alt="Ishvanta Solutions" style="height: 48px; margin-bottom: 0.5rem;"></div>
         <p>Upskilling India's tech workforce since 2006. Real trainers, real projects, real career growth.</p>
         <div class="footer-social">
-          <a href="#" class="social-icon" aria-label="LinkedIn">in</a>
-          <a href="#" class="social-icon" aria-label="Twitter">𝕏</a>
-          <a href="#" class="social-icon" aria-label="YouTube">▶</a>
-          <a href="#" class="social-icon" aria-label="Instagram">◎</a>
+          <a href="https://www.linkedin.com/in/ishvanta-solutions-041399402/" target="_blank" class="social-icon" aria-label="LinkedIn">in</a>
+          <a href="https://x.com/ishvantaacademy" target="_blank" class="social-icon" aria-label="Twitter">𝕏</a>
+          <a href="https://www.youtube.com/@IshvantaSolutions" target="_blank" class="social-icon" aria-label="YouTube">▶</a>
+          <a href="https://www.instagram.com/ishvantaacademy/" target="_blank" class="social-icon" aria-label="Instagram">◎</a>
+          <a href="https://www.facebook.com/profile.php?id=61572075207513" target="_blank" class="social-icon" aria-label="Facebook">ⓕ</a>
         </div>
       </div>
       <div class="footer-col">
@@ -70,7 +71,7 @@ function buildFooter(links) {
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© ${new Date().getFullYear()} Ishvanta Academy. All rights reserved.</p>
+      <p>© ${new Date().getFullYear()} Ishvanta Solutions. All rights reserved.</p>
       <p>Madhapur, Hyderabad · ishvantaacademy@gmail.com</p>
     </div>
   </footer>`;
