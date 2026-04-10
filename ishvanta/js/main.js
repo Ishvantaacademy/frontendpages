@@ -12,7 +12,7 @@ const ROOT_NAV_LINKS = NAV_LINKS.map(l => ({
   href: l.href.replace('../', '')
 }));
 
-function buildNav(links) {
+function buildNav(links, isRoot) {
   const current = window.location.pathname.split('/').pop() || 'index.html';
   const items = links.map(l => {
     const name = l.href.split('/').pop();
@@ -20,9 +20,10 @@ function buildNav(links) {
     const isCta = l.label === 'Contact';
     return `<li><a href="${l.href}" class="${isCta ? 'nav-cta' : ''}${active}">${l.label}</a></li>`;
   }).join('');
+  const logoSrc = isRoot ? 'images/Logo.png' : '../images/Logo.png';
   return `
   <nav class="nav" id="main-nav">
-    <a href="${links[0].href}" class="nav-logo"><img src="${isRoot ? 'images/Logo.png' : '../images/Logo.png'}" alt="Ishvanta Solutions" style="height: 32px;"></a>
+    <a href="${links[0].href}" class="nav-logo"><img src="${logoSrc}" alt="Ishvanta Solutions" style="height: 32px;"></a>
     <ul class="nav-links" id="nav-links">${items}</ul>
     <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
       <span></span><span></span><span></span>
@@ -30,15 +31,16 @@ function buildNav(links) {
   </nav>`;
 }
 
-function buildFooter(links) {
+function buildFooter(links, isRoot) {
   const quickLinks = links.slice(0, 5).map(l =>
     `<li><a href="${l.href}">${l.label}</a></li>`
   ).join('');
+  const logoSrc = isRoot ? 'images/Logo.png' : '../images/Logo.png';
   return `
   <footer class="footer">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="footer-logo"><img src="${isRoot ? 'images/Logo.png' : '../images/Logo.png'}" alt="Ishvanta Solutions" style="height: 48px; margin-bottom: 0.5rem;"></div>
+        <div class="footer-logo"><img src="${logoSrc}" alt="Ishvanta Solutions" style="height: 48px; margin-bottom: 0.5rem;"></div>
         <p>Upskilling India's tech workforce since 2006. Real trainers, real projects, real career growth.</p>
         <div class="footer-social">
           <a href="https://www.linkedin.com/in/ishvanta-solutions-041399402/" target="_blank" class="social-icon" aria-label="LinkedIn">in</a>
@@ -84,8 +86,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const navPlaceholder = document.getElementById('nav-placeholder');
   const footerPlaceholder = document.getElementById('footer-placeholder');
 
-  if (navPlaceholder) navPlaceholder.outerHTML = buildNav(links);
-  if (footerPlaceholder) footerPlaceholder.outerHTML = buildFooter(links);
+  if (navPlaceholder) navPlaceholder.outerHTML = buildNav(links, isRoot);
+  if (footerPlaceholder) footerPlaceholder.outerHTML = buildFooter(links, isRoot);
 
   const toggle = document.getElementById('nav-toggle');
   const navLinks = document.getElementById('nav-links');
