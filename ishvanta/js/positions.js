@@ -67,7 +67,9 @@ function buildJobCard(job) {
     </div>
     <div class="job-card-hint">Tap to view details →</div>
   `;
-  div.addEventListener('click', () => openDrawer(job));
+  div.addEventListener('click', () => {
+    window.location.href = `job.html?id=${encodeURIComponent(id)}`;
+  });
   return div;
 }
 
@@ -101,69 +103,6 @@ function buildSkillSection(skill, jobs) {
   return section;
 }
 
-function openDrawer(job) {
-  const overlay = document.getElementById('job-drawer-overlay');
-  const drawer = document.getElementById('job-drawer');
-  const content = document.getElementById('drawer-content');
-
-  const id = job['Job ID'];
-  const title = job['Job Title'] || 'Untitled Role';
-  const client = job['Client'] || '—';
-  const skill = job['Core Skill'] || '—';
-  const desc = job['Job Description'] || 'No description provided.';
-  const positions = job['Number of Positions'];
-  const mode = job['Nature of Office Presence'] || '—';
-  const location = job['Office Location'] || '—';
-
-  content.innerHTML = `
-    <div class="drawer-job-id">Job #${id}</div>
-    <div class="drawer-job-title">${title}</div>
-    <div class="drawer-meta-grid">
-      <div class="drawer-meta-item">
-        <label>Client</label>
-        <span>${client}</span>
-      </div>
-      <div class="drawer-meta-item">
-        <label>Core Skill</label>
-        <span>${skill}</span>
-      </div>
-      <div class="drawer-meta-item">
-        <label>Openings</label>
-        <span>${positions || '—'}</span>
-      </div>
-      <div class="drawer-meta-item">
-        <label>Work Mode</label>
-        <span>${mode}</span>
-      </div>
-      <div class="drawer-meta-item">
-        <label>Location</label>
-        <span>${location}</span>
-      </div>
-    </div>
-    <div class="drawer-desc-label">About the Role</div>
-    <div class="drawer-desc">${desc}</div>
-  `;
-
-  const applySection = document.createElement('div');
-  applySection.className = 'drawer-apply';
-  applySection.innerHTML = `<a href="${APPLY_PLACEHOLDER}" target="_blank" rel="noopener noreferrer" class="drawer-apply-btn">Apply for this Role →</a>`;
-  drawer.appendChild(applySection);
-
-  overlay.classList.add('active');
-  drawer.classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeDrawer() {
-  const overlay = document.getElementById('job-drawer-overlay');
-  const drawer = document.getElementById('job-drawer');
-  const applySection = drawer.querySelector('.drawer-apply');
-
-  overlay.classList.remove('active');
-  drawer.classList.remove('open');
-  document.body.style.overflow = '';
-  if (applySection) applySection.remove();
-}
 
 async function loadPositions() {
   const loading = document.getElementById('positions-loading');
@@ -213,10 +152,4 @@ async function loadPositions() {
 document.addEventListener('DOMContentLoaded', () => {
   loadPositions();
 
-  document.getElementById('job-drawer-overlay').addEventListener('click', closeDrawer);
-  document.getElementById('drawer-close').addEventListener('click', closeDrawer);
-
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') closeDrawer();
-  });
 });
