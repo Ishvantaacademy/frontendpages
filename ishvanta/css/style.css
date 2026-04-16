@@ -470,3 +470,40 @@ img { max-width: 100%; display: block; }
   .stat-pill { min-width: 100px; }
   .footer-social { gap: 0.5rem; }
 }
+
+/* ── FLOATING WHATSAPP WIDGET ── */
+.wa-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 15px rgba(37, 211, 102, 0.4);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.wa-float:hover {
+  background-color: #20b858;
+  transform: translateY(-4px);
+  box-shadow: 0px 8px 20px rgba(37, 211, 102, 0.5);
+}
+
+@media (max-width: 768px) {
+  .wa-float {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+  }
+  .wa-float svg {
+    width: 26px;
+    height: 26px;
+  }
+}
