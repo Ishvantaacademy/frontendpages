@@ -87,6 +87,11 @@ function buildFooter(links, isRoot) {
     </div>
     <div class="footer-bottom">
       <p>© ${new Date().getFullYear()} Ishvanta Solutions. All rights reserved.</p>
+      <div class="footer-legal-links">
+        <a href="${isRoot ? 'pages/privacy-policy.html' : 'privacy-policy.html'}">Privacy Policy</a>
+        <span>·</span>
+        <a href="${isRoot ? 'pages/data-deletion.html' : 'data-deletion.html'}">Data Deletion</a>
+      </div>
       <p>Madhapur, Hyderabad · ishvantaacademy@gmail.com</p>
     </div>
   </footer>`;

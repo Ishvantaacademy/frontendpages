@@ -43,4 +43,18 @@
     <priority>0.7</priority>
   </url>
 
+  <url>
+    <loc>https://ishvanta.solutions/pages/privacy-policy.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://ishvanta.solutions/pages/data-deletion.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
 </urlset>

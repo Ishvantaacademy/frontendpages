@@ -234,6 +234,22 @@ img { max-width: 100%; display: block; }
   font-size: 0.82rem;
 }
 
+.footer-legal-links {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.82rem;
+}
+
+.footer-legal-links a {
+  color: rgba(255,255,255,0.45);
+  transition: color var(--transition);
+}
+
+.footer-legal-links a:hover { color: var(--brand-primary); }
+
+.footer-legal-links span { color: rgba(255,255,255,0.2); }
+
 /* ── SHARED PAGE STYLES ── */
 .page-hero {
   padding: calc(var(--nav-height) + 4rem) 5% 4rem;
