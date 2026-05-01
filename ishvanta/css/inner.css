@@ -221,7 +221,9 @@
 /* ── CONTACT PAGE ── */
 .contact-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
+  max-width: 700px;
+  margin: 0 auto;
   gap: 4rem;
   align-items: start;
 }
@@ -306,7 +308,7 @@
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
   .about-grid { grid-template-columns: 1fr 1.2fr; gap: 2.5rem; }
-  .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .contact-grid { grid-template-columns: 1fr; gap: 2rem; max-width: 100%; }
   .founder-card { padding: 2rem; gap: 2rem; }
   .cdb-courses { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
 }
@@ -316,7 +318,7 @@
   .founder-card { flex-direction: column; gap: 1.5rem; padding: 1.75rem; }
   .founder-contact { flex-direction: column; gap: 0.75rem; }
   .founder-contact .btn { text-align: center; justify-content: center; }
-  .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .contact-grid { grid-template-columns: 1fr; gap: 2rem; max-width: 100%; }
   .trainer-card { flex-direction: column; gap: 1.1rem; align-items: flex-start; }
   .trainer-avatar { width: 60px; height: 60px; font-size: 1rem; }
   .course-domain-block .cdb-header { flex-wrap: wrap; gap: 0.5rem; }

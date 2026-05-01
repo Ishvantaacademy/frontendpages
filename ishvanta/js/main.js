@@ -79,7 +79,7 @@ function buildFooter(links, isRoot) {
       <div class="footer-col">
         <h4>Contact</h4>
         <ul>
-          <li><a href="mailto:ishvantaacademy@gmail.com">ishvantaacademy@gmail.com</a></li>
+          <li><a href="mailto:Enquiry@ishvanta.solutions">Enquiry@ishvanta.solutions</a></li>
           <li><a href="tel:+919032800664">+91 90328 00664</a></li>
           <li><a href="#">Madhapur, Hyderabad</a></li>
         </ul>
@@ -92,7 +92,7 @@ function buildFooter(links, isRoot) {
         <span>·</span>
         <a href="${isRoot ? 'pages/data-deletion.html' : 'data-deletion.html'}">Data Deletion</a>
       </div>
-      <p>Madhapur, Hyderabad · ishvantaacademy@gmail.com</p>
+      <p>Madhapur, Hyderabad · Enquiry@ishvanta.solutions</p>
     </div>
   </footer>`;
 }
