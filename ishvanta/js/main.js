@@ -36,7 +36,7 @@ function buildNav(links, isRoot) {
   const logoSrc = isRoot ? 'images/Logo.png' : '../images/Logo.png';
   return `
   <nav class="nav" id="main-nav">
-    <a href="${links[0].href}" class="nav-logo"><img src="${logoSrc}" alt="Ishvanta Solutions"></a>
+    <a href="${links[0].href}" class="nav-logo"><img src="${logoSrc}" alt="Ishvanta Solutions"><span class="brand-text">Ishvanta Solutions</span></a>
     <ul class="nav-links" id="nav-links">${items}</ul>
     <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
       <span></span><span></span><span></span>
