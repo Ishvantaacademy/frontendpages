@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap');
 
 :root {
-  --brand-primary: #FF7B54;
-  --brand-secondary: #2A2A4A;
-  --brand-accent: #2EE5C2;
-  --brand-electric: #FFE44D;
-  --bg-dark: #1F1F33;
-  --bg-card: #282846;
-  --bg-light: #FFFFFF;
-  --text-main: #1A1A2E;
+  --brand-primary: #3B82F6;
+  --brand-secondary: #FFFFFF;
+  --brand-accent: #60A5FA;
+  --brand-electric: #3B82F6;
+  --bg-dark: #0F172A;
+  --bg-card: #1E293B;
+  --bg-light: #0F172A;
+  --text-main: #FFFFFF;
   --text-muted: #6B6B8A;
   --text-light: #FFFFFF;
   --border-color: rgba(255,255,255,0.08);
@@ -35,30 +35,16 @@ body {
 }
 
 body.light-theme {
-  background: #ffffff;
-  background-image: 
-    radial-gradient(at 0% 0%, hsla(14,100%,94%,1) 0, transparent 50%), 
-    radial-gradient(at 50% 0%, hsla(167,82%,94%,1) 0, transparent 50%), 
-    radial-gradient(at 100% 0%, hsla(48,100%,94%,1) 0, transparent 50%),
-    radial-gradient(at 50% 50%, hsla(0,0%,100%,1) 0, transparent 100%);
-  background-attachment: fixed;
-  background-size: 200% 200%;
-  animation: meshGradient 20s ease infinite;
-  color: var(--text-main);
+  background: #0F172A;
+  color: #FFFFFF;
   font-family: 'Inter', sans-serif;
 }
 
-@keyframes meshGradient {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+body.light-theme section {
+  background: #0F172A !important;
+  color: #FFFFFF !important;
 }
 
-/* Seamless Sections */
-body.light-theme section {
-  border: none !important;
-  background: transparent !important;
-}
 
 /* Global Animations */
 .reveal {
@@ -91,18 +77,16 @@ body.light-theme section {
 
 
 body.light-theme .nav {
-  background: #080810 !important;
+  background: rgba(15, 23, 42, 0.8) !important;
+  backdrop-filter: blur(10px);
   color: #ffffff !important;
-}
-
-body.light-theme .nav .nav-links a {
-  color: #ffffff !important;
+  border-bottom: 1px solid rgba(255,255,255,0.05) !important;
 }
 
 body.light-theme .footer {
-  background: #ffffff !important;
-  color: var(--text-main) !important;
-  border-top: 1px solid rgba(0,0,0,0.05) !important;
+  background: #0F172A !important;
+  color: #FFFFFF !important;
+  border-top: 1px solid rgba(255,255,255,0.05) !important;
 }
 
 body.light-theme .footer-brand p,
@@ -110,52 +94,29 @@ body.light-theme .footer-col ul li a,
 body.light-theme .footer-col h4,
 body.light-theme .footer-logo,
 body.light-theme .footer-logo span {
-  color: rgba(0,0,0,0.7) !important;
+  color: rgba(255,255,255,0.7) !important;
 }
 
 body.light-theme .footer-col h4 {
-  color: var(--brand-secondary) !important;
-  opacity: 1;
+  color: #3B82F6 !important;
 }
+
 
 body.light-theme .footer-bottom {
-  border-top: 1px solid rgba(0,0,0,0.05) !important;
-  color: rgba(0,0,0,0.5) !important;
+  border-top: 1px solid rgba(255,255,255,0.05) !important;
+  color: rgba(255,255,255,0.5) !important;
 }
 
 
 
-body.light-theme .nav:not(.scrolled) .nav-links a {
+
+body.light-theme .nav .nav-links a {
+  font-size: 1.1rem !important;
+  font-weight: 700 !important;
   color: #ffffff !important;
 }
 
 
-body.light-theme p, 
-body.light-theme .hero-sub, 
-body.light-theme .section-subtitle, 
-body.light-theme .stat-lbl,
-body.light-theme .footer-brand p,
-body.light-theme .footer-col ul li a,
-body.light-theme .category-desc,
-body.light-theme .camp-tagline,
-body.light-theme .camp-highlights li,
-body.light-theme .cohort-tagline,
-body.light-theme .cohort-features li,
-body.light-theme .domain-card p,
-body.light-theme .why-card p,
-body.light-theme .testimonial-card p,
-body.light-theme .contact-info p,
-body.light-theme .contact-detail .cd-info span,
-body.light-theme .contact-detail .cd-info a,
-body.light-theme .founder-info p,
-body.light-theme .values-card p,
-body.light-theme .ec-tag,
-body.light-theme .ecosystem-card p,
-body.light-theme .step-detail p {
-  color: rgba(0,0,0,0.7) !important;
-  font-size: 1.1rem;
-  line-height: 1.8;
-}
 
 body.light-theme h1,
 body.light-theme h2,
@@ -176,9 +137,41 @@ body.light-theme .ecosystem-card h4,
 body.light-theme .step-num,
 body.light-theme .workflow-step h4,
 body.light-theme .step-detail strong {
-  color: var(--brand-secondary) !important;
-  font-weight: 800;
+  color: #FFFFFF !important;
 }
+
+body.light-theme p, 
+body.light-theme span,
+body.light-theme a,
+body.light-theme li,
+body.light-theme strong,
+body.light-theme label,
+body.light-theme .hero-sub, 
+body.light-theme .section-subtitle, 
+body.light-theme .stat-lbl,
+body.light-theme .footer-brand p,
+body.light-theme .footer-col ul li a,
+body.light-theme .footer-bottom,
+body.light-theme .category-desc,
+body.light-theme .camp-tagline,
+body.light-theme .camp-highlights li,
+body.light-theme .cohort-tagline,
+body.light-theme .cohort-features li,
+body.light-theme .domain-card p,
+body.light-theme .why-card p,
+body.light-theme .testimonial-card p,
+body.light-theme .contact-info p,
+body.light-theme .contact-detail .cd-info span,
+body.light-theme .contact-detail .cd-info a,
+body.light-theme .founder-info p,
+body.light-theme .values-card p,
+body.light-theme .ec-tag,
+body.light-theme .ecosystem-card p,
+body.light-theme .step-detail p {
+  color: rgba(255,255,255,0.7) !important;
+}
+
+
 
 body.light-theme h2 {
   font-size: clamp(2.2rem, 5vw, 3.5rem);
@@ -195,14 +188,14 @@ body.light-theme .stat-num span {
 }
 
 body.light-theme .domain-card {
-  background: #ffffff !important;
-  border: 1px solid rgba(0,0,0,0.05) !important;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.02) !important;
+  background: #1E293B !important;
+  border: 1px solid rgba(255,255,255,0.05) !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2) !important;
 }
 
 body.light-theme .domain-card:hover {
-  border-color: var(--brand-primary) !important;
-  box-shadow: 0 10px 30px rgba(255, 123, 84, 0.1) !important;
+  border-color: #3B82F6 !important;
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.1) !important;
 }
 
 body.light-theme .camp-card,
@@ -214,17 +207,19 @@ body.light-theme .partner-box,
 body.light-theme .pillar-card,
 body.light-theme .workflow-step,
 body.light-theme .ecosystem-card {
-  background: rgba(255, 255, 255, 0.7) !important;
+  background: rgba(30, 41, 59, 0.7) !important;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(0, 0, 0, 0.05) !important;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.04) !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2) !important;
 }
+
 
 
 body.light-theme .cohort-left {
-  border-right: 1px solid rgba(0, 0, 0, 0.05) !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.05) !important;
 }
+
 
 body.light-theme .cohort-meta .meta-pill {
   background: rgba(0, 0, 0, 0.05) !important;
@@ -765,8 +760,9 @@ body.light-theme .section-subtitle {
   max-width: 800px !important;
   margin: 1.5rem auto 4rem !important;
   line-height: 1.6 !important;
-  color: rgba(0,0,0,0.6) !important;
+  color: rgba(255,255,255,0.7) !important;
 }
+
 
 body.light-theme .workflow-step h4 {
   font-size: 1.5rem !important;
