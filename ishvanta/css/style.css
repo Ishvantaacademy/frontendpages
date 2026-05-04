@@ -35,13 +35,49 @@ body {
 }
 
 body.light-theme {
-  background: var(--bg-light);
+  background: #ffffff;
+  background-image: 
+    radial-gradient(at 0% 0%, hsla(14,100%,96%,1) 0, transparent 50%), 
+    radial-gradient(at 50% 0%, hsla(167,82%,96%,1) 0, transparent 50%), 
+    radial-gradient(at 100% 0%, hsla(48,100%,96%,1) 0, transparent 50%),
+    radial-gradient(at 50% 50%, hsla(0,0%,100%,1) 0, transparent 100%);
+  background-attachment: fixed;
   color: var(--text-main);
   font-family: 'Inter', sans-serif;
 }
 
+/* Seamless Sections */
+body.light-theme section {
+  border: none !important;
+  background: transparent !important;
+}
+
+/* Global Animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1), 
+              transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.reveal-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.reveal-delay-1 { transition-delay: 0.15s; }
+.reveal-delay-2 { transition-delay: 0.3s; }
+.reveal-delay-3 { transition-delay: 0.45s; }
+
+
 body.light-theme .nav:not(.scrolled) .nav-links a {
-  color: var(--text-main);
+  color: var(--brand-secondary);
 }
 
 body.light-theme .brand-text {
@@ -49,6 +85,7 @@ body.light-theme .brand-text {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 
 
 a { text-decoration: none; color: inherit; }
