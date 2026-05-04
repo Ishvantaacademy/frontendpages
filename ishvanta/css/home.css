@@ -601,13 +601,16 @@
   text-align: center;
   font-family: var(--font-display);
   font-weight: 900;
-  letter-spacing: -2px;
+  letter-spacing: -3px;
   line-height: 1;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
+  font-size: clamp(3rem, 8vw, 6rem) !important;
   background: linear-gradient(135deg, var(--brand-secondary) 0%, #4a4a8a 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.05));
 }
+
 
 @keyframes floatLeftRight {
   0% { opacity: 0; transform: translateX(-100px) skewX(-10deg); filter: blur(10px); }

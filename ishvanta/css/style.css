@@ -152,7 +152,9 @@ body.light-theme .values-card p,
 body.light-theme .ec-tag,
 body.light-theme .ecosystem-card p,
 body.light-theme .step-detail p {
-  color: rgba(0,0,0,0.65) !important;
+  color: rgba(0,0,0,0.7) !important;
+  font-size: 1.1rem;
+  line-height: 1.8;
 }
 
 body.light-theme h1,
@@ -175,7 +177,18 @@ body.light-theme .step-num,
 body.light-theme .workflow-step h4,
 body.light-theme .step-detail strong {
   color: var(--brand-secondary) !important;
+  font-weight: 800;
 }
+
+body.light-theme h2 {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  margin-bottom: 1.5rem;
+}
+
+body.light-theme h3 {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+}
+
 
 body.light-theme .stat-num span {
   color: var(--brand-primary);
@@ -529,7 +542,7 @@ img { max-width: 100%; display: block; }
 
 .container { padding: 0 5%; }
 
-.section { padding: 5rem 5%; }
+.section { padding: 8rem 5%; }
 
 /* ── STAT PILL ── */
 .stats-row {
@@ -734,3 +747,35 @@ img { max-width: 100%; display: block; }
     font-size: 1.15rem;
   }
 }
+
+/* ── ADDITIONAL LIGHT THEME SCALE OVERRIDES ── */
+body.light-theme .section-tag {
+  background: rgba(255, 123, 84, 0.1) !important;
+  color: var(--brand-primary) !important;
+  font-size: 1rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 3px !important;
+  padding: 0.6rem 1.5rem !important;
+  text-transform: uppercase !important;
+  border-radius: 50px !important;
+}
+
+body.light-theme .section-subtitle {
+  font-size: 1.4rem !important;
+  max-width: 800px !important;
+  margin: 1.5rem auto 4rem !important;
+  line-height: 1.6 !important;
+  color: rgba(0,0,0,0.6) !important;
+}
+
+body.light-theme .workflow-step h4 {
+  font-size: 1.5rem !important;
+  margin-bottom: 0.75rem !important;
+}
+
+body.light-theme .step-label {
+  font-size: 0.85rem !important;
+  font-weight: 700 !important;
+  color: var(--brand-primary) !important;
+}
+

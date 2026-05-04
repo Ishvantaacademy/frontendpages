@@ -190,3 +190,44 @@
 
   .job-cards { padding: 0.85rem; }
 }
+
+/* ── LIGHT THEME OVERRIDES ── */
+body.light-theme .skill-section {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border-color: rgba(0,0,0,0.05);
+}
+
+body.light-theme .skill-header h3 {
+  color: var(--brand-secondary);
+}
+
+body.light-theme .skill-header:hover {
+  background: rgba(0,0,0,0.02);
+}
+
+body.light-theme .job-card {
+  background: #ffffff;
+  border-color: rgba(0,0,0,0.05);
+}
+
+body.light-theme .job-card-title {
+  color: var(--brand-secondary);
+}
+
+body.light-theme .job-card-id,
+body.light-theme .job-card-hint {
+  color: rgba(0,0,0,0.4);
+}
+
+body.light-theme .positions-loading,
+body.light-theme .positions-error,
+body.light-theme .empty-state,
+body.light-theme .empty-state h3 {
+  color: rgba(0,0,0,0.5);
+}
+
+body.light-theme .loading-spinner {
+  border-color: rgba(0,0,0,0.1);
+  border-top-color: var(--brand-primary);
+}
