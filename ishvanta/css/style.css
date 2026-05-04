@@ -91,13 +91,22 @@ body.light-theme .nav .nav-links a {
 
 body.light-theme .footer {
   background: #080810 !important;
-  color: #ffffff !important;
+  color: #E5E7EB !important;
 }
 
 body.light-theme .footer-brand p,
-body.light-theme .footer-col ul li a {
-  color: rgba(255,255,255,0.6) !important;
+body.light-theme .footer-col ul li a,
+body.light-theme .footer-col h4,
+body.light-theme .footer-logo,
+body.light-theme .footer-logo span {
+  color: #E5E7EB !important;
 }
+
+body.light-theme .footer-col h4 {
+  color: #ffffff !important;
+  opacity: 0.9;
+}
+
 
 body.light-theme .nav:not(.scrolled) .nav-links a {
   color: #ffffff !important;
