@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap');
 
 :root {
   --brand-primary: #FF7B54;
@@ -33,6 +33,23 @@ body {
   font-size: 16px;
   overflow-x: hidden;
 }
+
+body.light-theme {
+  background: var(--bg-light);
+  color: var(--text-main);
+  font-family: 'Inter', sans-serif;
+}
+
+body.light-theme .nav:not(.scrolled) .nav-links a {
+  color: var(--text-main);
+}
+
+body.light-theme .brand-text {
+  background: linear-gradient(90deg, var(--brand-secondary), var(--brand-primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 
 a { text-decoration: none; color: inherit; }
 

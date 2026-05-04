@@ -577,3 +577,210 @@
   .hero-actions { flex-direction: column; align-items: center; }
   .hero-actions .btn { width: 100%; max-width: 280px; justify-content: center; }
 }
+
+/* ── B2B LIGHT THEME ── */
+.light-theme .hero.b2b-hero {
+  background: #ffffff;
+  min-height: 80vh;
+  padding-bottom: 8rem;
+}
+
+.light-theme .hero-noise {
+  background: 
+    radial-gradient(circle at 80% 20%, rgba(255, 123, 84, 0.05), transparent 50%),
+    radial-gradient(circle at 20% 80%, rgba(42, 42, 74, 0.03), transparent 50%);
+}
+
+.light-theme .hero-title {
+  color: var(--brand-secondary);
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: -3px;
+}
+
+.light-theme .hero-sub {
+  color: var(--text-muted);
+  font-size: 1.15rem;
+  max-width: 600px;
+}
+
+.light-theme .hero-badge {
+  background: rgba(42, 42, 74, 0.05);
+  color: var(--brand-secondary);
+  border-color: rgba(42, 42, 74, 0.1);
+}
+
+.light-theme .btn-outline.b2b-outline {
+  border-color: var(--brand-secondary);
+  color: var(--brand-secondary);
+}
+
+.light-theme .btn-outline.b2b-outline:hover {
+  background: rgba(42, 42, 74, 0.05);
+}
+
+/* Glossy Pillars */
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.pillar-card {
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.05);
+  border-radius: var(--radius-lg);
+  padding: 3rem 2.5rem;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.pillar-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: var(--brand-primary);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.pillar-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+  border-color: rgba(255, 123, 84, 0.2);
+}
+
+.pillar-card:hover::before {
+  opacity: 1;
+}
+
+.pillar-num {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--brand-primary);
+  margin-bottom: 1.5rem;
+  letter-spacing: 2px;
+}
+
+.pillar-card h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--brand-secondary);
+  margin-bottom: 1rem;
+}
+
+.pillar-card p {
+  color: var(--text-muted);
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+/* Partnerships */
+.partnerships {
+  background: #fcfcfd;
+  padding: 8rem 5%;
+}
+
+.partners-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+.partner-box {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 2.5rem;
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.03);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+  transition: all 0.3s ease;
+}
+
+.partner-box:hover {
+  box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+  border-color: rgba(0,0,0,0.06);
+}
+
+.partner-logo {
+  flex-shrink: 0;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8fafc;
+  border-radius: var(--radius-md);
+  padding: 1rem;
+}
+
+.partner-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.partner-box:hover .partner-logo img {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+.partner-info h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
+  color: var(--brand-secondary);
+  margin-bottom: 0.25rem;
+}
+
+.partner-label {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--brand-primary);
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.partner-info p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Visuals & White Space */
+.light-theme .section-title {
+  color: var(--brand-secondary);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.light-theme .section-subtitle {
+  color: var(--text-muted);
+}
+
+.light-theme .section-tag {
+  background: rgba(255, 123, 84, 0.08);
+  color: var(--brand-primary);
+  border-color: rgba(255, 123, 84, 0.1);
+}
+
+@media (max-width: 900px) {
+  .pillars-grid, .partners-container {
+    grid-template-columns: 1fr;
+  }
+  .partner-box {
+    flex-direction: column;
+    text-align: center;
+  }
+}

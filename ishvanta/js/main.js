@@ -1,5 +1,6 @@
 const NAV_LINKS = [
   { label: 'Home',           href: '../index.html' },
+  { label: 'Training',       href: '../pages/training.html' },
   { label: 'About',          href: '../pages/about.html' },
   { label: 'Courses',        href: '../pages/courses.html' },
   { label: 'Trainers',       href: '../pages/trainers.html' },
