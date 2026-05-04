@@ -510,15 +510,17 @@ img { max-width: 100%; display: block; }
 }
 
 .brand-text {
-  font-size: 1.8rem;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.65rem;
   font-weight: 800;
-  background: linear-gradient(90deg, #FF7B54, #FFE44D, #2EE5C2);
+  background: linear-gradient(90deg, #ffffff 0%, #ffeb85 50%, #FF7B54 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: shine 4s linear infinite;
+  animation: shine 5s linear infinite;
   display: inline-block;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.2px;
+  filter: drop-shadow(0 2px 8px rgba(255, 123, 84, 0.25));
 }
 
 @keyframes shine {
@@ -529,12 +531,12 @@ img { max-width: 100%; display: block; }
 
 @media (max-width: 768px) {
   .brand-text {
-    font-size: 1.4rem;
+    font-size: 1.35rem;
   }
 }
 
 @media (max-width: 640px) {
   .brand-text {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
   }
 }
