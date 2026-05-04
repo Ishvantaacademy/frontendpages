@@ -581,7 +581,7 @@
 /* ── B2B LIGHT THEME ── */
 .light-theme .hero.b2b-hero {
   background: #ffffff;
-  min-height: 90vh;
+  min-height: 70vh;
   padding-bottom: 5rem;
   display: flex;
   align-items: center;
@@ -589,25 +589,6 @@
   text-align: center;
   position: relative;
   overflow: hidden;
-}
-
-.hero-video-bg {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  z-index: 0;
-}
-
-.hero-video-bg video {
-  width: 100%; height: 100%;
-  object-fit: cover;
-  opacity: 0.15;
-}
-
-.video-overlay {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at center, transparent 0%, #ffffff 80%);
 }
 
 .light-theme .hero-content {
@@ -621,6 +602,7 @@
   white-space: nowrap;
   font-size: clamp(2rem, 5vw, 3.5rem) !important;
 }
+
 
 .mx-auto { margin-left: auto; margin-right: auto; }
 .flex-center { display: flex; justify-content: center; gap: 1.5rem; }
