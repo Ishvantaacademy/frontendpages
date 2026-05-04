@@ -36,8 +36,22 @@ body {
 
 body.light-theme {
   background: #ffffff;
+  background-image: 
+    radial-gradient(at 0% 0%, hsla(14,100%,94%,1) 0, transparent 50%), 
+    radial-gradient(at 50% 0%, hsla(167,82%,94%,1) 0, transparent 50%), 
+    radial-gradient(at 100% 0%, hsla(48,100%,94%,1) 0, transparent 50%),
+    radial-gradient(at 50% 50%, hsla(0,0%,100%,1) 0, transparent 100%);
+  background-attachment: fixed;
+  background-size: 200% 200%;
+  animation: meshGradient 20s ease infinite;
   color: var(--text-main);
   font-family: 'Inter', sans-serif;
+}
+
+@keyframes meshGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* Seamless Sections */
@@ -47,22 +61,18 @@ body.light-theme section {
 }
 
 /* Global Animations */
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
 .reveal {
   opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1), 
-              transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+  transform: translateY(30px) scale(0.98);
+  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .reveal.reveal-active {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
 }
+
 
 @keyframes floatLeftRight {
   from { opacity: 0; transform: translateX(-50px); }
