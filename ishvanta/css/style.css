@@ -123,7 +123,18 @@ body.light-theme .category-desc,
 body.light-theme .camp-tagline,
 body.light-theme .camp-highlights li,
 body.light-theme .cohort-tagline,
-body.light-theme .cohort-features li {
+body.light-theme .cohort-features li,
+body.light-theme .domain-card p,
+body.light-theme .why-card p,
+body.light-theme .testimonial-card p,
+body.light-theme .contact-info p,
+body.light-theme .contact-detail .cd-info span,
+body.light-theme .contact-detail .cd-info a,
+body.light-theme .founder-info p,
+body.light-theme .values-card p,
+body.light-theme .ec-tag,
+body.light-theme .ecosystem-card p,
+body.light-theme .step-detail p {
   color: rgba(0,0,0,0.65) !important;
 }
 
@@ -134,7 +145,18 @@ body.light-theme h4,
 body.light-theme .stat-num,
 body.light-theme .camp-card h3,
 body.light-theme .cohort-left h3,
-body.light-theme .coming-soon-card h3 {
+body.light-theme .coming-soon-card h3,
+body.light-theme .domain-card h3,
+body.light-theme .why-card h4,
+body.light-theme .testimonial-card .tc-author strong,
+body.light-theme .contact-info h2,
+body.light-theme .contact-detail .cd-info strong,
+body.light-theme .founder-info h2,
+body.light-theme .values-card h3,
+body.light-theme .ecosystem-card h4,
+body.light-theme .step-num,
+body.light-theme .workflow-step h4,
+body.light-theme .step-detail strong {
   color: var(--brand-secondary) !important;
 }
 
@@ -142,17 +164,33 @@ body.light-theme .stat-num span {
   color: var(--brand-primary);
 }
 
+body.light-theme .domain-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(0,0,0,0.05) !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.02) !important;
+}
+
+body.light-theme .domain-card:hover {
+  border-color: var(--brand-primary) !important;
+  box-shadow: 0 10px 30px rgba(255, 123, 84, 0.1) !important;
+}
+
 body.light-theme .camp-card,
 body.light-theme .cohort-card,
 body.light-theme .coming-soon-card,
 body.light-theme .why-card,
-body.light-theme .testimonial-card {
+body.light-theme .testimonial-card,
+body.light-theme .partner-box,
+body.light-theme .pillar-card,
+body.light-theme .workflow-step,
+body.light-theme .ecosystem-card {
   background: rgba(255, 255, 255, 0.7) !important;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(0, 0, 0, 0.05) !important;
   box-shadow: 0 10px 30px rgba(0,0,0,0.04) !important;
 }
+
 
 body.light-theme .cohort-left {
   border-right: 1px solid rgba(0, 0, 0, 0.05) !important;
