@@ -86,6 +86,64 @@ body.light-theme .brand-text {
   -webkit-text-fill-color: transparent;
 }
 
+body.light-theme p, 
+body.light-theme .hero-sub, 
+body.light-theme .section-subtitle, 
+body.light-theme .stat-lbl,
+body.light-theme .footer-brand p,
+body.light-theme .footer-col ul li a,
+body.light-theme .category-desc,
+body.light-theme .camp-tagline,
+body.light-theme .camp-highlights li,
+body.light-theme .cohort-tagline,
+body.light-theme .cohort-features li {
+  color: rgba(0,0,0,0.65) !important;
+}
+
+body.light-theme h1,
+body.light-theme h2,
+body.light-theme h3,
+body.light-theme h4,
+body.light-theme .stat-num,
+body.light-theme .camp-card h3,
+body.light-theme .cohort-left h3,
+body.light-theme .coming-soon-card h3 {
+  color: var(--brand-secondary) !important;
+}
+
+body.light-theme .stat-num span {
+  color: var(--brand-primary);
+}
+
+body.light-theme .camp-card,
+body.light-theme .cohort-card,
+body.light-theme .coming-soon-card,
+body.light-theme .why-card,
+body.light-theme .testimonial-card {
+  background: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.05) !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.04) !important;
+}
+
+body.light-theme .cohort-left {
+  border-right: 1px solid rgba(0, 0, 0, 0.05) !important;
+}
+
+body.light-theme .cohort-meta .meta-pill {
+  background: rgba(0, 0, 0, 0.05) !important;
+  color: rgba(0, 0, 0, 0.6) !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+body.light-theme .btn-enquiry-outline {
+  color: var(--brand-secondary) !important;
+  border-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+
+
 
 
 a { text-decoration: none; color: inherit; }
