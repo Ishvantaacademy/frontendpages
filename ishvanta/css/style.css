@@ -90,8 +90,9 @@ body.light-theme .nav .nav-links a {
 }
 
 body.light-theme .footer {
-  background: #080810 !important;
-  color: #E5E7EB !important;
+  background: #ffffff !important;
+  color: var(--text-main) !important;
+  border-top: 1px solid rgba(0,0,0,0.05) !important;
 }
 
 body.light-theme .footer-brand p,
@@ -99,13 +100,19 @@ body.light-theme .footer-col ul li a,
 body.light-theme .footer-col h4,
 body.light-theme .footer-logo,
 body.light-theme .footer-logo span {
-  color: #E5E7EB !important;
+  color: rgba(0,0,0,0.7) !important;
 }
 
 body.light-theme .footer-col h4 {
-  color: #ffffff !important;
-  opacity: 0.9;
+  color: var(--brand-secondary) !important;
+  opacity: 1;
 }
+
+body.light-theme .footer-bottom {
+  border-top: 1px solid rgba(0,0,0,0.05) !important;
+  color: rgba(0,0,0,0.5) !important;
+}
+
 
 
 body.light-theme .nav:not(.scrolled) .nav-links a {
