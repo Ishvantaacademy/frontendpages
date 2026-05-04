@@ -314,3 +314,75 @@
     padding: 1.5rem 5%;
   }
 }
+
+/* ── LIGHT THEME OVERRIDES ── */
+body.light-theme .job-detail-hero {
+  background: transparent;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+body.light-theme .job-detail-title {
+  color: var(--brand-secondary);
+}
+
+body.light-theme .job-back-link {
+  color: rgba(0,0,0,0.5);
+}
+
+body.light-theme .job-detail-id {
+  color: rgba(0,0,0,0.4);
+}
+
+body.light-theme .job-meta-item {
+  background: #ffffff;
+  border-color: rgba(0,0,0,0.05);
+}
+
+body.light-theme .job-meta-label {
+  color: rgba(0,0,0,0.4);
+}
+
+body.light-theme .job-meta-value {
+  color: var(--brand-secondary);
+}
+
+body.light-theme .job-desc-heading {
+  color: var(--brand-primary);
+  border-bottom-color: rgba(0,0,0,0.05);
+}
+
+body.light-theme .job-desc-content {
+  color: rgba(0,0,0,0.7);
+}
+
+body.light-theme .job-apply-card,
+body.light-theme .job-share-card {
+  background: #ffffff;
+  border-color: rgba(0,0,0,0.05);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+}
+
+body.light-theme .job-apply-card p,
+body.light-theme .job-share-card h4 {
+  color: rgba(0,0,0,0.5);
+}
+
+body.light-theme .job-share-btn {
+  background: rgba(0,0,0,0.02);
+  border-color: rgba(0,0,0,0.05);
+  color: rgba(0,0,0,0.6);
+}
+
+body.light-theme .job-share-btn:hover {
+  background: rgba(255,123,84,0.1);
+  color: var(--brand-primary);
+  border-color: rgba(255,123,84,0.2);
+}
+
+body.light-theme .job-error-state h2 {
+  color: var(--brand-secondary);
+}
+
+body.light-theme .job-error-state p {
+  color: rgba(0,0,0,0.5);
+}

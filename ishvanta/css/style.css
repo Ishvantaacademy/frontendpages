@@ -300,8 +300,8 @@ img { max-width: 100%; display: block; }
 }
 
 .nav-links a {
-  font-size: 0.9rem;
-  font-weight: 500;
+  font-size: 1.05rem;
+  font-weight: 600;
   color: rgba(255,255,255,0.75);
   transition: color var(--transition);
   letter-spacing: 0.3px;
@@ -542,7 +542,7 @@ img { max-width: 100%; display: block; }
 
 .container { padding: 0 5%; }
 
-.section { padding: 8rem 5%; }
+.section { padding: 5rem 5%; }
 
 /* ── STAT PILL ── */
 .stats-row {
