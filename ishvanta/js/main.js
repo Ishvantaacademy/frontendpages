@@ -1,11 +1,8 @@
 const NAV_LINKS = [
-  { label: 'Home',           href: '../index.html' },
-  { label: 'Training',       href: '../pages/training.html' },
-  { label: 'About',          href: '../pages/about.html' },
-  { label: 'Courses',        href: '../pages/courses.html' },
-  { label: 'Trainers',       href: '../pages/trainers.html' },
-  { label: 'Open Positions', href: '../pages/positions.html' },
-  { label: 'Contact',        href: '../pages/contact.html' },
+  { label: 'Home',       href: '../index.html' },
+  { label: 'About Us',   href: '../pages/about.html' },
+  { label: 'Services',   href: '../pages/services.html' },
+  { label: 'Contact Us', href: '../pages/contact.html' },
 ];
 
 const ROOT_NAV_LINKS = NAV_LINKS.map(l => ({
@@ -31,8 +28,7 @@ function buildNav(links, isRoot) {
   const items = links.map(l => {
     const name = l.href.split('/').pop();
     const active = name === current ? ' active' : '';
-    const isCta = l.label === 'Contact';
-    return `<li><a href="${l.href}" class="${isCta ? 'nav-cta' : ''}${active}">${l.label}</a></li>`;
+    return `<li><a href="${l.href}" class="${active}">${l.label}</a></li>`;
   }).join('');
   const logoSrc = isRoot ? 'images/Logo.png' : '../images/Logo.png';
   return `
@@ -46,7 +42,7 @@ function buildNav(links, isRoot) {
 }
 
 function buildFooter(links, isRoot) {
-  const quickLinks = links.slice(0, 5).map(l =>
+  const quickLinks = links.map(l =>
     `<li><a href="${l.href}">${l.label}</a></li>`
   ).join('');
   const logoSrc = isRoot ? 'images/Logo.png' : '../images/Logo.png';
@@ -55,7 +51,7 @@ function buildFooter(links, isRoot) {
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="footer-logo"><img src="${logoSrc}" alt="Ishvanta Solutions" style="height:52px;margin-bottom:0.75rem;"></div>
-        <p>Upskilling India's tech workforce since 2006. Real trainers, real projects, real career growth.</p>
+        <p>Your strategic partner in Edutech and Software Development. Built on 21 years of industry leadership.</p>
         <div class="footer-social">
           <a href="https://www.linkedin.com/in/ishvanta-solutions-041399402/" target="_blank" class="social-icon" aria-label="LinkedIn">${ICONS.linkedin}</a>
           <a href="https://x.com/ishvantaacademy" target="_blank" class="social-icon" aria-label="Twitter">${ICONS.twitter}</a>
@@ -69,12 +65,12 @@ function buildFooter(links, isRoot) {
         <ul>${quickLinks}</ul>
       </div>
       <div class="footer-col">
-        <h4>Domains</h4>
+        <h4>Services</h4>
         <ul>
-          <li><a href="${links[2].href}">Analytics</a></li>
-          <li><a href="${links[2].href}">Data Engineering</a></li>
-          <li><a href="${links[2].href}">Web &amp; Mobile</a></li>
-          <li><a href="${links[2].href}">DevOps &amp; QA</a></li>
+          <li><a href="${links[2] ? links[2].href : '#'}#edutech">Edutech &amp; Training</a></li>
+          <li><a href="${links[2] ? links[2].href : '#'}#software">Software Development</a></li>
+          <li><a href="${links[2] ? links[2].href : '#'}#contract-to-hire">Contract to Hire</a></li>
+          <li><a href="${links[2] ? links[2].href : '#'}#consulting">IT Consulting</a></li>
         </ul>
       </div>
       <div class="footer-col">

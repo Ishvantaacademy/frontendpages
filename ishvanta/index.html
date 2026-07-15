@@ -13,122 +13,134 @@
   <link rel="stylesheet" href="css/home.css" />
 </head>
 <body class="light-theme">
+  <!-- Glowing background blobs -->
+  <div class="glow-blob-container">
+    <div class="glow-blob glow-blob-1"></div>
+    <div class="glow-blob glow-blob-2"></div>
+    <div class="glow-blob glow-blob-3"></div>
+  </div>
+
   <div id="nav-placeholder"></div>
 
   <!-- HERO -->
-  <section class="hero b2b-hero">
+  <section class="hero index-hero">
     <div class="hero-content reveal">
-      <h1 class="centered-headline float-left-right">
-        We Build Teams. We Build Tech. We Build Success.
-      </h1>
-      <p class="hero-sub b2b-sub reveal reveal-delay-1 mx-auto" style="font-size: 1.35rem; max-width: 900px; margin-top: 1rem; margin-bottom: 2.5rem;">
-        Ishvanta Solutions is your end-to-end partner for high-velocity software development and strategic team building. From product engineering to Global Capability Center (GCC) setup, we bridge the gap between global vision and Indian excellence.
-      </p>
-      <div class="hero-actions reveal reveal-delay-2 flex-center">
-        <a href="#workflow" class="btn btn-primary">View Our Workflow</a>
-        <a href="pages/contact.html" class="btn btn-outline b2b-outline">Start Your Partnership</a>
+      <div class="hero-badge reveal">
+        <span class="pulse-dot"></span>
+        <span>Edutech &amp; Software Development</span>
       </div>
-    </div>
-  </section>
-
-
-  <!-- THE ISHVANTA ENGINE (WORKFLOW) -->
-  <section id="workflow" class="section workflow-section reveal">
-    <div class="section-center">
-      <div class="section-tag">Our Process</div>
-      <h2 class="section-title">The Ishvanta Engine.</h2>
-      <p class="section-subtitle">A high-velocity, precision-engineered flow from sourcing to deployment.</p>
+      <h1 class="hero-title float-left-right">
+        Elite Software.<br/><span class="hero-title-accent">Practice-First Edutech.</span>
+      </h1>
+      <p class="hero-sub reveal reveal-delay-1">
+        Ishvanta Solutions Pvt Ltd is a premier Software Development and Edutech company. Founded and led by an IT veteran with <strong>21 years of rich industry experience</strong>, we build high-performance software systems and scale technical teams through precision training.
+      </p>
+      <div class="hero-actions reveal reveal-delay-2">
+        <a href="#services" class="btn btn-primary">Explore Our Services</a>
+        <a href="pages/contact.html" class="btn btn-outline">Work With Us</a>
+      </div>
     </div>
     
-    <div class="workflow-grid reveal reveal-delay-2">
-      <!-- Stage 01 -->
-      <div class="workflow-step glass-card">
-        <div class="step-icon">🔍</div>
-        <div class="step-num">01</div>
-        <h4>Sourcing</h4>
-        <p class="step-label">Powered by <a href="https://www.G1Careers.com" target="_blank" style="color: inherit; text-decoration: underline;">G1Careers</a></p>
-        <div class="step-detail">
-          <strong>Intelligence-Driven Sourcing</strong>
-          <p>We tap into our exclusive ecosystem of 30,000+ pre-vetted tech professionals to find the top 1% that fits your specific tech stack and culture.</p>
+    <!-- Hero Right visual (WOW glass showcase) -->
+    <div class="hero-visual reveal reveal-delay-1">
+      <div class="visual-wrapper">
+        <img src="images/ai_hero_visual.png" alt="Futuristic Tech Visual" class="main-hero-img">
+        <div class="glow-overlay"></div>
+      </div>
+      <!-- Floating Badges -->
+      <div class="floating-badge fb-1">
+        <div class="fb-icon">💻</div>
+        <div class="fb-text">
+          <strong>Software Dev</strong>
+          <span>100% Production Grade</span>
         </div>
       </div>
-
-      <div class="workflow-step glass-card reveal reveal-delay-2">
-        <div class="step-icon">🎓</div>
-        <div class="step-num">02</div>
-        <h4>Training</h4>
-        <p class="step-label">Precision Skill-Alignment</p>
-        <div class="step-detail">
-          <strong>Precision Skill-Alignment</strong>
-          <p>We don't just find talent; we prepare it. Using our internal training frameworks, we upskill the team in Data Engineering, DevOps, and AI to ensure they are productive from Day 1.</p>
+      <div class="floating-badge fb-2">
+        <div class="fb-icon">🎓</div>
+        <div class="fb-text">
+          <strong>Edutech Programs</strong>
+          <span>Practitioner-Led</span>
         </div>
       </div>
-
-      <div class="workflow-step glass-card reveal reveal-delay-3">
-        <div class="step-icon">⚙️</div>
-        <div class="step-num">03</div>
-        <h4>Alignment & Engineering</h4>
-        <p class="step-label">Powered by <a href="https://scaleorange.com/" target="_blank" style="color: inherit; text-decoration: underline;">ScaleOrange</a></p>
-        <div class="step-detail">
-          <strong>Technical Architecture & Integration</strong>
-          <p>We align your team with your product roadmap. In partnership with <a href="https://scaleorange.com/" target="_blank" style="color: var(--brand-primary); text-decoration: none; font-weight: 700;">ScaleOrange Technologies</a>, we establish the engineering standards, DevOps pipelines, and technical architecture required for world-class delivery.</p>
+      <div class="floating-badge fb-3">
+        <div class="fb-icon">🏆</div>
+        <div class="fb-text">
+          <strong>21+ Years IT</strong>
+          <span>Leadership Sourced</span>
         </div>
       </div>
-
-      <div class="workflow-step glass-card reveal reveal-delay-1">
-        <div class="step-icon">🚀</div>
-        <div class="step-num">04</div>
-        <h4>Deployment</h4>
-        <p class="step-label">Seamless Scaling</p>
-        <div class="step-detail">
-          <strong>Seamless Deployment & Managed Operations</strong>
-          <p>Your team is deployed within your dedicated space or our managed office setup. We handle ongoing operations, people strategy, and project oversight, allowing you to focus on your core business.</p>
-        </div>
-      </div>
-      
-      <div class="workflow-line"></div>
     </div>
   </section>
 
-  <!-- POWER TRIANGLE (ECOSYSTEM) -->
-  <section class="section ecosystem-section reveal">
+  <!-- CORE SERVICES -->
+  <section id="services" class="floating-section services-section reveal">
     <div class="section-center">
-      <h2 class="section-title">A Partnership of Excellence.</h2>
-      <p class="section-subtitle">A Strategic Ecosystem for Global Impact.</p>
+      <div class="section-tag">Core Offerings</div>
+      <h2 class="section-title">Our Services.</h2>
+      <p class="section-subtitle">High-velocity software engineering, tailored upskilling programs, and strategic team building.</p>
     </div>
-    <div class="ecosystem-grid">
-      <div class="ecosystem-card glass-card reveal reveal-delay-1">
-        <div class="ec-header">
-          <img src="images/Logo.png" alt="Ishvanta Solutions">
-          <h4>Ishvanta Solutions</h4>
-        </div>
-        <span class="ec-tag">The Strategic Partner</span>
-        <p>Oversight, Training, GCC Setup.</p>
-      </div>
-      
-      <div class="ecosystem-card glass-card highlight reveal reveal-delay-2">
-        <div class="ec-header">
-          <a href="https://scaleorange.com/" target="_blank" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; align-items: center; text-align: center;">
-            <img src="images/SO.png" alt="ScaleOrange Technologies">
-            <h4>ScaleOrange Technologies</h4>
-          </a>
-        </div>
-        <span class="ec-tag">The Engineering Core</span>
-        <p>Product Dev, IIT-led Tech.</p>
+    
+    <div class="grid-4 reveal reveal-delay-2" style="margin-top: 3rem;">
+      <!-- Service 1 -->
+      <div class="card glass-card">
+        <div style="font-size: 2.5rem; margin-bottom: 1rem;">🎓</div>
+        <h4 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem;">Edutech &amp; Training</h4>
+        <p style="font-size: 0.9rem; line-height: 1.6; color: rgba(255,255,255,0.7);">Practice-first tech cohorts, corporate upskilling programs, and structured coding bootcamps to build industry-ready developers.</p>
+        <a href="pages/services.html#edutech" style="display: inline-block; margin-top: 1.5rem; font-weight: 600; color: var(--brand-primary); font-size: 0.88rem;">Learn More ↗</a>
       </div>
 
-      <div class="ecosystem-card glass-card reveal reveal-delay-3">
-        <div class="ec-header">
-          <a href="https://www.G1Careers.com" target="_blank" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; align-items: center; text-align: center;">
-            <img src="images/G1.png" alt="G1Careers">
-            <h4>G1Careers</h4>
-          </a>
-        </div>
-        <span class="ec-tag">The Talent Engine</span>
-        <p>30,000+ Vetted Professionals.</p>
+      <!-- Service 2 -->
+      <div class="card glass-card">
+        <div style="font-size: 2.5rem; margin-bottom: 1rem;">💻</div>
+        <h4 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem;">Software Development</h4>
+        <p style="font-size: 0.9rem; line-height: 1.6; color: rgba(255,255,255,0.7);">Custom software products, enterprise applications, robust databases, and API integrations built by top-tier engineers.</p>
+        <a href="pages/services.html#software" style="display: inline-block; margin-top: 1.5rem; font-weight: 600; color: var(--brand-primary); font-size: 0.88rem;">Learn More ↗</a>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="card glass-card">
+        <div style="font-size: 2.5rem; margin-bottom: 1rem;">🤝</div>
+        <h4 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem;">Contract to Hire</h4>
+        <p style="font-size: 0.9rem; line-height: 1.6; color: rgba(255,255,255,0.7);">Deploy pre-vetted, handpicked tech talent to scale your engineering bandwidth with maximum alignment and zero delay.</p>
+        <a href="pages/services.html#contract-to-hire" style="display: inline-block; margin-top: 1.5rem; font-weight: 600; color: var(--brand-primary); font-size: 0.88rem;">Learn More ↗</a>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="card glass-card">
+        <div style="font-size: 2.5rem; margin-bottom: 1rem;">⚙️</div>
+        <h4 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem;">Consulting Services</h4>
+        <p style="font-size: 0.9rem; line-height: 1.6; color: rgba(255,255,255,0.7);">Expert advice on system architecture, cloud DevOps pipelines, digital migrations, and technology roadmaps.</p>
+        <a href="pages/services.html#consulting" style="display: inline-block; margin-top: 1.5rem; font-weight: 600; color: var(--brand-primary); font-size: 0.88rem;">Learn More ↗</a>
       </div>
     </div>
   </section>
+
+  <!-- FOUNDER SECTION -->
+  <section id="founder" class="floating-section founder-section reveal">
+    <div class="about-grid" style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; align-items: center;">
+      <div class="founder-visual" style="position: relative; display: flex; justify-content: center;">
+        <div style="border-radius: var(--radius-lg); overflow: hidden; border: 1.5px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.03); max-width: 340px; box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
+          <img src="images/Kumara.png" alt="Kumara Avasarala" style="width: 100%; height: auto; display: block; object-fit: cover;">
+        </div>
+      </div>
+      <div class="founder-info">
+        <div class="section-tag">Founder &amp; Tech Lead</div>
+        <h2 style="font-family: var(--font-display); font-weight: 800; font-size: clamp(2rem, 4vw, 2.8rem); line-height: 1.1; margin-bottom: 1.5rem;">Led by 21 Years of IT Expertise.</h2>
+        <p style="margin-bottom: 1.2rem; line-height: 1.7; color: rgba(255,255,255,0.75);">
+          Ishvanta Solutions Pvt Ltd is founded and steered by <strong>Kumara Avasarala</strong>, an IT veteran with 21 years of extensive industry experience in software architecture, project management, and tech training.
+        </p>
+        <p style="margin-bottom: 1.5rem; line-height: 1.7; color: rgba(255,255,255,0.75);">
+          Having designed systems and upskilled teams for nearly two decades, Kumara brings practical, battlefield-tested standards to both our Software Engineering deliverables and our Edutech curriculum.
+        </p>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a href="pages/about.html" class="btn btn-primary">Learn About Founder</a>
+          <a href="pages/contact.html" class="btn btn-outline">Start Consultation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
 
   <div id="footer-placeholder"></div>
   <script src="js/main.js"></script>

@@ -3,56 +3,42 @@
 
   <url>
     <loc>https://ishvanta.solutions/</loc>
-    <lastmod>2026-04-10</lastmod>
+    <lastmod>2026-07-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://ishvanta.solutions/pages/about.html</loc>
-    <lastmod>2026-04-10</lastmod>
+    <lastmod>2026-07-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://ishvanta.solutions/pages/courses.html</loc>
-    <lastmod>2026-04-20</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://ishvanta.solutions/pages/services.html</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://ishvanta.solutions/pages/trainers.html</loc>
-    <lastmod>2026-04-10</lastmod>
+    <loc>https://ishvanta.solutions/pages/contact.html</loc>
+    <lastmod>2026-07-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://ishvanta.solutions/pages/positions.html</loc>
-    <lastmod>2026-04-10</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://ishvanta.solutions/pages/contact.html</loc>
-    <lastmod>2026-04-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
     <loc>https://ishvanta.solutions/pages/privacy-policy.html</loc>
-    <lastmod>2026-04-16</lastmod>
+    <lastmod>2026-07-06</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
     <loc>https://ishvanta.solutions/pages/data-deletion.html</loc>
-    <lastmod>2026-04-16</lastmod>
+    <lastmod>2026-07-06</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>

@@ -109,12 +109,7 @@ body.light-theme .footer-bottom {
 
 
 
-
-body.light-theme .nav .nav-links a {
-  font-size: 1.1rem !important;
-  font-weight: 700 !important;
-  color: #ffffff !important;
-}
+/* Removed nav link overrides to unify style */
 
 
 
@@ -244,7 +239,8 @@ img { max-width: 100%; display: block; }
 .nav {
   position: fixed;
   top: 0; left: 0; right: 0;
-  height: var(--nav-height);
+  height: 72px !important;
+  min-height: 72px !important;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -270,19 +266,21 @@ img { max-width: 100%; display: block; }
 
 .nav-logo {
   gap: 12px;
-  font-family: var(--font-display);
-  font-size: 1.35rem;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.2rem;
   font-weight: 800;
   letter-spacing: -0.5px;
   display: flex;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .nav-logo img {
-  height: 64px;
+  height: 44px !important;
   width: auto;
   object-fit: contain;
   display: block;
+  flex-shrink: 0;
 }
 
 .nav-logo span { color: var(--brand-primary); }
@@ -290,31 +288,42 @@ img { max-width: 100%; display: block; }
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 2rem;
+  gap: 1.5rem;
   align-items: center;
 }
 
 .nav-links a {
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: rgba(255,255,255,0.75);
-  transition: color var(--transition);
+  font-family: 'Outfit', sans-serif !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  color: rgba(255, 255, 255, 0.75);
+  transition: all var(--transition);
   letter-spacing: 0.3px;
+  position: relative;
+  padding: 0.4rem 0.6rem;
+  white-space: nowrap;
+  text-decoration: none !important;
 }
 
 .nav-links a:hover,
-.nav-links a.active { color: var(--brand-primary); }
-
-.nav-cta {
-  background: var(--brand-primary);
-  color: #fff !important;
-  padding: 0.45rem 1.1rem;
-  border-radius: 50px;
-  font-weight: 600 !important;
-  transition: opacity var(--transition) !important;
+.nav-links a.active {
+  color: var(--brand-primary);
 }
 
-.nav-cta:hover { opacity: 0.88; }
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px; left: 50%;
+  width: 0; height: 2px;
+  background: var(--brand-primary);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 80%;
+}
 
 .nav-toggle {
   display: none;
@@ -643,14 +652,6 @@ img { max-width: 100%; display: block; }
     font-size: 1rem;
     border-bottom: 1px solid var(--border-color);
   }
-  .nav-links li:last-child a { border-bottom: none; }
-  .nav-cta {
-    margin-top: 0.5rem;
-    text-align: center;
-    border-radius: var(--radius-sm) !important;
-    padding: 0.65rem 1rem !important;
-    display: block;
-  }
   .nav-toggle { display: flex; }
 }
 
@@ -773,5 +774,116 @@ body.light-theme .step-label {
   font-size: 0.85rem !important;
   font-weight: 700 !important;
   color: var(--brand-primary) !important;
+}
+
+/* ── GLOW BLOBS & FLOAT STYLES ── */
+
+:root {
+  --glow-1: rgba(59, 130, 246, 0.15);
+  --glow-2: rgba(99, 102, 241, 0.12);
+  --glow-3: rgba(139, 92, 246, 0.1);
+}
+
+.glow-blob-container {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.glow-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.glow-blob-1 {
+  top: 10%; left: -5%;
+  width: 45vw; height: 45vw;
+  background: radial-gradient(circle, var(--glow-1) 0%, transparent 70%);
+  animation: moveBlob1 25s ease-in-out infinite alternate;
+}
+
+.glow-blob-2 {
+  bottom: 15%; right: -5%;
+  width: 50vw; height: 50vw;
+  background: radial-gradient(circle, var(--glow-2) 0%, transparent 70%);
+  animation: moveBlob2 30s ease-in-out infinite alternate;
+}
+
+.glow-blob-3 {
+  top: 50%; left: 40%;
+  width: 35vw; height: 35vw;
+  background: radial-gradient(circle, var(--glow-3) 0%, transparent 70%);
+  animation: moveBlob3 20s ease-in-out infinite alternate;
+}
+
+@keyframes moveBlob1 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(8vw, 12vh) scale(1.1); }
+  100% { transform: translate(-3vw, 5vh) scale(0.95); }
+}
+
+@keyframes moveBlob2 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-10vw, -10vh) scale(0.9); }
+  100% { transform: translate(5vw, 6vh) scale(1.15); }
+}
+
+@keyframes moveBlob3 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-5vw, 15vh) scale(1.05); }
+  100% { transform: translate(8vw, -8vh) scale(0.9); }
+}
+
+/* Redefine global glass card to dark premium glass */
+.glass-card {
+  background: rgba(30, 41, 59, 0.45) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: var(--radius-lg) !important;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.12) !important;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.glass-card:hover {
+  transform: translateY(-6px) scale(1.01) !important;
+  background: rgba(30, 41, 59, 0.6) !important;
+  border-color: rgba(59, 130, 246, 0.4) !important;
+  box-shadow: 0 25px 50px rgba(59, 130, 246, 0.15), inset 0 1px 1px rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Floating panel section layout utility */
+.floating-section {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 4rem 3rem;
+  background: rgba(30, 41, 59, 0.25) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 32px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255,255,255,0.05);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.floating-section:hover {
+  box-shadow: 0 35px 70px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255,255,255,0.08);
+}
+
+@media (max-width: 900px) {
+  .floating-section {
+    margin: 2rem 5% !important;
+    padding: 3rem 1.5rem !important;
+    border-radius: 24px !important;
+  }
 }
 

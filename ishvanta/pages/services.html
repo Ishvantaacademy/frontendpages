@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary SEO -->
+  <title>Services | Ishvanta Solutions — Edutech, Software Development, Staffing</title>
+  <meta name="description" content="Explore Ishvanta Solutions' expert services: premium Edutech training, high-velocity Software Development, flexible Contract to Hire staffing, and IT Consulting." />
+  <meta name="keywords" content="Edutech Hyderabad, software development India, contract to hire, IT consulting, developer training, custom upskilling, tech team building" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://ishvanta.solutions/pages/services.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ishvanta.solutions/pages/services.html" />
+  <meta property="og:title" content="Services | Ishvanta Solutions — Edutech, Software Development, Staffing" />
+  <meta property="og:description" content="Discover our core services designed to accelerate business growth: practitioner-led Edutech upskilling, custom Software Development, Contract-to-Hire, and IT Consulting." />
+  <meta property="og:image" content="https://ishvanta.solutions/images/Logo.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@ishvantaacademy" />
+  <meta name="twitter:title" content="Services | Ishvanta Solutions" />
+  <meta name="twitter:description" content="Edutech, Software Development, Contract-to-Hire, and IT Consulting led by industry practitioners." />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Ishvanta Solutions Services",
+    "provider": {
+      "@type": "Organization",
+      "name": "Ishvanta Solutions",
+      "url": "https://ishvanta.solutions",
+      "logo": "https://ishvanta.solutions/images/Logo.png"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Tech Offerings",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Edutech & Custom Upskilling"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Software Development & Product Engineering"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Contract to Hire Staffing"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "IT Consulting & Architecture Advisory"
+          }
+        }
+      ]
+    }
+  }
+  </script>
+
+  <link rel="icon" type="image/png" href="../images/Logo.png" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/inner.css" />
+  <style>
+    .services-detail-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3.5rem;
+    }
+    .service-detail-card {
+      padding: 3rem;
+      border-radius: var(--radius-lg);
+      transition: all var(--transition);
+    }
+    .service-header {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 1.5rem;
+    }
+    .service-header h3 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #fff;
+    }
+    .service-header-icon {
+      font-size: 2.8rem;
+    }
+    .service-body {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+    .service-left-content {
+      display: flex;
+      flex-direction: column;
+    }
+    .service-left-content p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 1.2rem;
+    }
+    .service-right-title {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      color: var(--brand-primary);
+      margin-top: 1rem;
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .service-features-list {
+      list-style: none;
+      margin-bottom: 1.5rem;
+    }
+    .service-features-list li {
+      position: relative;
+      padding-left: 1.75rem;
+      margin-bottom: 0.75rem;
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.7);
+      transition: all var(--transition);
+      cursor: default;
+    }
+    .service-features-list li:hover {
+      color: #ffffff;
+      transform: translateX(4px);
+    }
+    .service-features-list li::before {
+      content: "▸";
+      position: absolute;
+      left: 0;
+      color: var(--brand-primary);
+      font-weight: bold;
+    }
+    .service-visual-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    .service-img-wrapper {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      background: rgba(30, 41, 59, 0.2);
+      width: 100%;
+      max-width: 360px;
+    }
+    .service-ai-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .service-img-wrapper:hover .service-ai-img {
+      transform: scale(1.04);
+    }
+    .img-glow-spot {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.08), transparent 70%);
+      pointer-events: none;
+    }
+    @media (max-width: 900px) {
+      .service-body {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .service-detail-card {
+        padding: 2rem;
+      }
+    }
+    @media (max-width: 640px) {
+      .service-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+      }
+      .service-header h3 {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body class="light-theme">
+  <!-- Glowing background blobs -->
+  <div class="glow-blob-container">
+    <div class="glow-blob glow-blob-1"></div>
+    <div class="glow-blob glow-blob-2"></div>
+    <div class="glow-blob glow-blob-3"></div>
+  </div>
+
+  <div id="nav-placeholder"></div>
+
+  <section class="page-hero reveal" style="border-bottom: none; background: transparent;">
+    <div class="section-tag">Our Capabilities</div>
+    <h1 class="section-title">Engineered to <span class="highlight">deliver impact.</span></h1>
+    <p class="section-subtitle">From developer upskilling pipelines to enterprise-grade software product releases — we build and guide with veteran expertise.</p>
+  </section>
+
+  <section class="floating-section reveal">
+    <div class="services-detail-grid">
+      
+      <!-- Edutech & Training -->
+      <div id="edutech" class="glass-card service-detail-card" style="border:none !important; background:transparent !important; box-shadow:none !important; padding:0;">
+        <div class="service-header">
+          <div class="service-header-icon">🎓</div>
+          <div>
+            <div class="badge badge-orange" style="margin-bottom: 0.5rem;">Edutech &amp; Training</div>
+            <h3>Edutech &amp; Custom Upskilling</h3>
+          </div>
+        </div>
+        <div class="service-body">
+          <div class="service-left-content">
+            <p>At Ishvanta Solutions, we believe tech training should match production realities. Our practice-first Edutech programs are built for working professionals, job seekers, and graduates who want to bridge the gap between classroom theory and real-world implementation.</p>
+            <p>We work directly with corporations to design custom onboarding curricula, ensuring new engineering hires hit the ground running on Day 1. Every program is practitioner-led, hands-on, and outcome-oriented.</p>
+            <h4 class="service-right-title">Key Offerings</h4>
+            <ul class="service-features-list">
+              <li>Corporate Upskilling &amp; Onboarding Pipelines</li>
+              <li>Challenge-First Bootcamps (Data Engineering, SQL, dbt)</li>
+              <li>Data Analytics &amp; Analytical Engineering Cohorts</li>
+              <li>Linux, Docker, Kubernetes &amp; DevOps Specializations</li>
+              <li>Real Projects with Peer-to-Peer Code Reviews</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary" style="align-self: flex-start;">Enquire for Training</a>
+          </div>
+          <div class="service-visual-container">
+            <div class="service-img-wrapper">
+              <img src="../images/ai_edutech_visual.png" alt="Edutech & Upskilling Visual" class="service-ai-img">
+              <div class="img-glow-spot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr style="border: none; border-top: 1px solid var(--border-color); margin: 2rem 0;" />
+
+      <!-- Software Development -->
+      <div id="software" class="glass-card service-detail-card" style="border:none !important; background:transparent !important; box-shadow:none !important; padding:0;">
+        <div class="service-header">
+          <div class="service-header-icon">💻</div>
+          <div>
+            <div class="badge badge-teal" style="margin-bottom: 0.5rem;">Engineering</div>
+            <h3>Software Development &amp; Product Engineering</h3>
+          </div>
+        </div>
+        <div class="service-body">
+          <div class="service-left-content">
+            <p>We design, code, and deploy custom software products that scale. Our engineering team combines senior architecture skills with modern development tools to build high-performance web applications, reliable backend systems, and clean databases.</p>
+            <p>We work with agile sprint methodologies, maintaining high code coverage, automated tests, and robust security protocols. From MVP creation to legacy migrations, we handle your technology lifecycle.</p>
+            <h4 class="service-right-title">Key Capabilities</h4>
+            <ul class="service-features-list">
+              <li>Custom Full-Stack Web &amp; Mobile Applications</li>
+              <li>Database Design, Schema Modeling &amp; Snowflake Optimization</li>
+              <li>API Development, Integrations &amp; Microservices</li>
+              <li>Agile Product Engineering &amp; MVP Launches</li>
+              <li>Clean Codebase Refactoring &amp; System Upgrades</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary" style="align-self: flex-start;">Start a Project</a>
+          </div>
+          <div class="service-visual-container">
+            <div class="service-img-wrapper">
+              <img src="../images/ai_software_visual.png" alt="Software Product Engineering Visual" class="service-ai-img">
+              <div class="img-glow-spot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr style="border: none; border-top: 1px solid var(--border-color); margin: 2rem 0;" />
+
+      <!-- Contract to Hire -->
+      <div id="contract-to-hire" class="glass-card service-detail-card" style="border:none !important; background:transparent !important; box-shadow:none !important; padding:0;">
+        <div class="service-header">
+          <div class="service-header-icon">🤝</div>
+          <div>
+            <div class="badge badge-purple" style="margin-bottom: 0.5rem;">Staffing</div>
+            <h3>Contract to Hire / Strategic Team Building</h3>
+          </div>
+        </div>
+        <div class="service-body">
+          <div class="service-left-content">
+            <p>Finding the right tech talent is hard. Finding talent that fits your stack, culture, and delivery schedule is even harder. We leverage our curated network of pre-vetted tech professionals to connect you with developers who are ready to contribute from day one.</p>
+            <p>Our Contract-to-Hire model gives you the flexibility to evaluate engineers in real-world scenarios before extending permanent offers, reducing recruitment risk and accelerating onboarding speed.</p>
+            <h4 class="service-right-title">Hiring Advantages</h4>
+            <ul class="service-features-list">
+              <li>Pre-Vetted Developers for Data, Web, &amp; Cloud</li>
+              <li>Custom-Trained Talents Ready for Immediate Deployment</li>
+              <li>Flexible Hiring Contracts with Evaluation Options</li>
+              <li>End-to-End Recruitment &amp; Technical Screening</li>
+              <li>Accelerated Staffing to Keep Roadmaps on Schedule</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary" style="align-self: flex-start;">Scale Your Team</a>
+          </div>
+          <div class="service-visual-container">
+            <div class="service-img-wrapper" style="padding: 2.5rem; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(139, 92, 246, 0.07); gap: 1.5rem; border-radius: var(--radius-lg);">
+              <div style="font-size: 4rem; line-height:1;">🤝</div>
+              <div style="text-align:center;">
+                <div style="font-size:2rem; font-weight:800; color:#fff; font-family:var(--font-display);">500+</div>
+                <div style="font-size:0.85rem; color:rgba(255,255,255,0.55);">Placements Made</div>
+              </div>
+              <div style="text-align:center;">
+                <div style="font-size:2rem; font-weight:800; color:#fff; font-family:var(--font-display);">Top 1%</div>
+                <div style="font-size:0.85rem; color:rgba(255,255,255,0.55);">Pre-Screened Talent</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr style="border: none; border-top: 1px solid var(--border-color); margin: 2rem 0;" />
+
+      <!-- Consulting Services -->
+      <div id="consulting" class="glass-card service-detail-card" style="border:none !important; background:transparent !important; box-shadow:none !important; padding:0;">
+        <div class="service-header">
+          <div class="service-header-icon">⚙️</div>
+          <div>
+            <div class="badge badge-gold" style="margin-bottom: 0.5rem;">Advisory</div>
+            <h3>IT Consulting &amp; Architecture Advisory</h3>
+          </div>
+        </div>
+        <div class="service-body">
+          <div class="service-left-content">
+            <p>Technology changes rapidly. Our consulting services are led by industry veterans who help your business navigate complex architecture decisions, cloud migrations, and workflow automation.</p>
+            <p>We audit your existing pipelines, identify security vulnerabilities, analyze performance bottlenecks, and recommend cost-efficient optimizations. Get senior advisory without the full-time overhead.</p>
+            <h4 class="service-right-title">Advisory Areas</h4>
+            <ul class="service-features-list">
+              <li>Enterprise Cloud Architecture Strategy (AWS, Azure, GCP)</li>
+              <li>CI/CD Pipeline Audits &amp; DevOps Transformations</li>
+              <li>Data Warehousing &amp; Modern Data Stack Strategy</li>
+              <li>Legacy Code Migrations &amp; Security Compliance</li>
+              <li>Technical Advisory &amp; Digital Roadmaps</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary" style="align-self: flex-start;">Schedule a Consultation</a>
+          </div>
+          <div class="service-visual-container">
+            <div class="service-img-wrapper" style="padding: 2.5rem; display: flex; align-items: center; justify-content: center; background: rgba(255, 215, 0, 0.04);">
+              <img src="../images/Logo.png" alt="Ishvanta Architecture Advisory" style="width: 70%; height: auto; display: block; object-fit: contain; filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.2));">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="floating-section courses-cta reveal" style="text-align: center; background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(59, 130, 246, 0.12) 0%, transparent 70%) !important;">
+    <h2 style="font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 800; color: #fff;">Ready to elevate your technology capabilities?</h2>
+    <p style="color: rgba(255,255,255,0.6); margin: 1rem auto 2rem; max-width: 600px;">Let's schedule a session to discuss your software engineering, tech team scaling, or corporate upskilling goals.</p>
+    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem;">
+      <a href="contact.html" class="btn btn-primary">Enquire Now</a>
+      <a href="https://wa.me/919032800664" target="_blank" class="btn btn-outline">WhatsApp Consultation</a>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script src="../js/main.js"></script>
+</body>
+</html>
